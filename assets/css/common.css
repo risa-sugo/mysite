@@ -84,7 +84,6 @@ a:hover {
     left: 50%;
     transform: translateX(-50%);
     background-color: #FFF;
-    /*    background-color: #76605F;*/
   }
   .bar_top {
     top: 10px;
@@ -199,7 +198,6 @@ a:hover {
 　左から右に線が伸びる（下部）
 */
   .gnavi li a {
-    /*線の基点とするためrelativeを指定*/
     position: relative;
   }
   .gnavi li.current a, .gnavi li a:hover {
@@ -216,7 +214,7 @@ a:hover {
     background: #fff;
     transition: all .3s;
     transform: scale(0, 1); /*X方向0、Y方向1*/
-    transform-origin: left top; /*左上基点*/
+    transform-origin: left top;
   }
   /*現在地とhoverの設定*/
   .gnavi li.current a::after, .gnavi li a:hover::after {
@@ -231,23 +229,9 @@ a:hover {
   color: #fff;
 }
 .footer p {
-  /*  display: none;*/
   padding-bottom: 15px;
   font-size: 1.4rem;
 }
-/*
-.footer__sns_links {
-  margin-bottom: 30px;
-}
-.footer__sns_links li {
-  display: inline-block;
-  width: 20px;
-  margin: 0 10px;
-}
-.footer__sns_links li img {
-  width: 100%;
-}
-*/
 .footer small {
   color: #fff;
 }
@@ -262,11 +246,6 @@ a:hover {
     padding-top: 40px;
     text-align: left;
   }
-/*
-  .footer__sns_links {
-    float: right;
-  }
-*/
   .footer small {
     clear: both;
     display: block;
@@ -276,7 +255,6 @@ a:hover {
 #page-top a {
   display: none;
 }
-
 @media (min-width: 1040px) {
   #page-top a {
     position: fixed;

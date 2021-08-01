@@ -36,12 +36,8 @@ $('#page-link a[href*="#"]').click(function () {
 });
 
 
-
-
-// 動きのきっかけとなるアニメーションの名前を定義
+//オブジェクトの動き
 function fadeAnime(){
-
-  // ふわっ
   $('.fadeUpTrigger').each(function(){ //fadeUpTriggerというクラス名が
     var elemPos = $(this).offset().top-50;//要素より、50px上の
     var scroll = $(window).scrollTop();
@@ -52,22 +48,18 @@ function fadeAnime(){
 	$(this).removeClass('fadeUp');// 画面外に出たらfadeUpというクラス名を外す
 }
     });
-
-
-
-  // ふわっ
-
-  $('.fadeInTrigger').each(function(){ //fadeInTriggerというクラス名が
-    var elemPos = $(this).offset().top-50;//要素より、50px上の
+	
+  $('.fadeInTrigger').each(function(){ 
+    var elemPos = $(this).offset().top-50;
     var scroll = $(window).scrollTop();
     var windowHeight = $(window).height();
     if (scroll >= elemPos - windowHeight){
-    $(this).addClass('fadeIn');// 画面内に入ったらfadeInというクラス名を追記
+    $(this).addClass('fadeIn');
     }else{
-    $(this).removeClass('fadeIn');// 画面外に出たらfadeInというクラス名を外す
+    $(this).removeClass('fadeIn');
     }
     });
-}
+
 
  $('.fadeLeftTrigger').each(function(){ 
     var elemPos = $(this).offset().top-50;
@@ -90,20 +82,17 @@ function fadeAnime(){
     $(this).removeClass('fadeRight');
     }
     });
+}
 
 // 画面をスクロールをしたら動かしたい場合の記述
   $(window).scroll(function (){
     fadeAnime();/* アニメーション用の関数を呼ぶ*/
   });// ここまで画面をスクロールをしたら動かしたい場合の記述
 
-//// 画面が読み込まれたらすぐに動かしたい場合の記述
+// 画面が読み込まれたらすぐに動かしたい場合の記述
   $(window).on('load', function(){
     fadeAnime();/* アニメーション用の関数を呼ぶ*/
   });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
 
-//// 画面をスクロールをしたら動かしたい場合の記述
-  $(window).scroll(function (){
-    fadeAnime();/* アニメーション用の関数を呼ぶ*/
-  });// ここまで画面をスクロールをしたら動かしたい場合の記述
 
 

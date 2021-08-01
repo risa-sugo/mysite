@@ -3,16 +3,16 @@
 .big-bg:before {
   background-image: url("../images/top/bg.jpg");
   background-position: center top;
-	background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
- content: "";
-	display: block;
-	position: fixed;
-	min-height: 100vh;
+  content: "";
+  display: block;
+  position: fixed;
+  min-height: 100vh;
   top: 0;
   left: 0;
   width: 100%;
-	z-index: -1;
+  z-index: -1;
 }
 .section-top-container {
   color: #fff;
@@ -79,7 +79,6 @@
   animation: pathmove 1.4s ease-in-out infinite;
   opacity: 0;
 }
-/*高さ・位置・透過が変化して線が上から下に動く*/
 @keyframes pathmove {
   0% {
     height: 0;
@@ -133,12 +132,6 @@
     max-width: 290px;
     object-fit: contain;
   }
-  /*
-  .section-top__image img {
-    max-width: 580px;
-    object-fit: contain;
-  }
-*/
 }
 @media (min-width: 1040px) {
   .section-top__image {
@@ -214,7 +207,7 @@
 }
 .mask {
   display: block;
-  line-height: 0; /*行の高さを0にする*/
+  line-height: 0;
   overflow: hidden; /*拡大してはみ出る要素を隠す*/
 }
 .section-works h2::before {
@@ -283,14 +276,6 @@
     top: -15px;
   }
 }
-/*
-.section-about h2 {
-  padding-bottom: 40px;
-  border-bottom: solid 1px #333;
-  margin-bottom: 40px;
-  position: relative;
-}
-*/
 .section-about {
   background-color: #ECE9E2;
   padding: 40px 0;
@@ -315,7 +300,6 @@
   top: -10px;
 }
 .section-about-detail {
-  /*	text-align: left;*/
   display: inline-block;
   margin: 0 auto;
   padding: 20px 20px 0;
